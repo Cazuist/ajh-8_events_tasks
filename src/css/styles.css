@@ -1,0 +1,146 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.task-manager {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: lightgray;
+  border-radius: 30px;
+  padding: 10px 10px 30px;
+}
+
+.manager-header {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: blue;
+
+  cursor: move;
+}
+
+.manager-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  padding-right: 10px;
+
+  text-align: right;
+  font-size: 20px;
+  color: white;
+}
+
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: cyan;
+}
+
+.mngr-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section-header {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  color: gray;
+}
+
+.search {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.task-row {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding-right: 15px;
+  padding-left: 10px;
+  position: relative;
+
+  justify-content: space-between;
+  align-items: center;
+
+  color: gray;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 15px;
+}
+
+.task-status {
+  box-sizing: border-box;
+  height: 25px;
+  width: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 2px solid gray;
+
+  cursor: pointer;
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px;
+}
+
+.task-status.pinned {
+  background-image: url('../img/pin_1.png');
+}
+
+.task-status.all {
+  background-image: url('../img/pin_0.png');
+}
+
+.task-del {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: -8px;
+  z-index: 10;
+
+  width: 17px;
+  height: 17px;
+  padding-bottom: 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 2px solid gray;
+  background-color: lightpink;
+
+  cursor: default;
+}
+
+.message {
+  color: red;
+
+  font-style: italic;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
