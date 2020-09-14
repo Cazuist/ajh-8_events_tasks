@@ -17,7 +17,7 @@ export default class ManagerController {
   addListeners() {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && this.input === document.activeElement) {
-        if (this.input.value) {
+        if (this.input.value.trim()) {
           const task = new Task(this.input.value);
           this.tasks.push(task);
           this.unfocuseInput();
@@ -66,8 +66,9 @@ export default class ManagerController {
       const text = this.input.value.toLowerCase();
       const filteredTasks = this.tasks.filter((task) => task.text.toLowerCase().includes(text) && task.status !== 'pinned');
 
-      if (!text) {
-        this.redrawTasks(filteredTasks);
+      if
+      (!text) {
+        this.redrawAllTasks(filteredTasks);
         return;
       }
 
